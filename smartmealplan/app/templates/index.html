@@ -1,12 +1,54 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SuperCook Clone</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-</head>
+{% extends 'base.html' %} {% load static %}
+<title>{% block title %}SmartMealPlan - Recipe Generator{% endblock %}</title>
 <body>
+  {% block body %}
+  
+      <!-- ##### Hero Area Start ##### -->
+    <section class="hero-area">
+      <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{% static 'images/bg1.jpg' %}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Delicios Homemade Burger</h5>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tristique nisl vitae luctus sollicitudin. Fusce consectetur sem eget dui tristique, ac posuere arcu varius.</p>
+              <a href="#" class="btn delicious-btn" data-animation="fadeInUp" data-delay="1000ms">See Receipe</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'images/bg6.jpg' %}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Delicios Homemade Burger</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tristique nisl vitae luctus sollicitudin. Fusce consectetur sem eget dui tristique, ac posuere arcu varius.</p>
+                <a href="#" class="btn delicious-btn" data-animation="fadeInUp" data-delay="1000ms">See Receipe</a>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{% static 'images/bg7.jpg' %}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h5>Delicios Homemade Burger</h5>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tristique nisl vitae luctus sollicitudin. Fusce consectetur sem eget dui tristique, ac posuere arcu varius.</p>
+                <a href="#" class="btn delicious-btn" data-animation="fadeInUp" data-delay="1000ms">See Receipe</a>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+    <!-- ##### Hero Area End ##### -->
+  
     <div class="container mt-5">
         <h1 class="text-center">SuperCook Clone</h1>
         <form method="post">
@@ -23,5 +65,49 @@
             </ul>
         {% endif %}
     </div>
+
+
+    <!-- ##### Quote Subscribe Area Start ##### -->
+    <section class="quote-subscribe-adds mt-3">
+        <div class="container">
+            <div class="row align-items-end">
+                <!-- Quote -->
+                <div class="col-12 col-lg-4">
+                    <div class="quote-area text-center">
+                        <span>"</span>
+                        <h4>Nothing is better than going home to family and eating good food and relaxing</h4>
+                        <p>John Smith</p>
+                        <div class="date-comments d-flex justify-content-between">
+                            <div class="date">January 04, 2018</div>
+                            <div class="comments">2 Comments</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Newsletter -->
+                <div class="col-12 col-lg-4">
+                    <div class="newsletter-area">
+                        <h4>Subscribe to our newsletter</h4>
+                        <!-- Form -->
+                        <div class="newsletter-form bg-img bg-overlay">
+                            <form action="#" method="post">
+                                <input type="email" name="email" placeholder="Subscribe to newsletter">
+                                <button type="submit" class="btn delicious-btn w-100">Subscribe</button>
+                            </form>
+                            <p>Fusce nec ante vitae lacus aliquet vulputate. Donec sceleri sque accumsan molestie. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Adds -->
+                <div class="col-12 col-lg-4">
+                    <div class="delicious-add">
+                        <img src="{% static 'images/add.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ##### Quote Subscribe Area End ##### -->
+    {% endblock %}
 </body>
-</html>
